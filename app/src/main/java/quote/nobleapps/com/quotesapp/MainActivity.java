@@ -22,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
         quoteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Hello");
+
+                QuoteService qs = new QuoteService();
+                quoteTextView.setText(qs.getRandomQuote());
             }
         });
     }
